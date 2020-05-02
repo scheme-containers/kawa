@@ -2,6 +2,7 @@
 # Installing the JDK or the JRE does not seem to work in buster-slim.
 FROM debian:buster AS build
 RUN apt-get update && apt-get -y --no-install-recommends install \
+      git ca-certificates \
       build-essential \
       default-jdk-headless \
  && rm -rf /var/lib/apt/lists/*
