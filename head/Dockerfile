@@ -3,6 +3,7 @@
 FROM debian:buster AS build
 RUN apt-get update && apt-get -y --no-install-recommends install \
       git ca-certificates \
+      autoconf automake libtool m4 \
       build-essential \
       default-jdk-headless \
  && rm -rf /var/lib/apt/lists/*
