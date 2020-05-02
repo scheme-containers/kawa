@@ -13,7 +13,6 @@ RUN mkdir kawa && tar -C kawa --strip-components 1 -xf kawa.tar.gz
 WORKDIR kawa
 RUN ./configure
 RUN make
-RUN make check
 RUN make install
 
 FROM debian:buster
