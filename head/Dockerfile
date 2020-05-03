@@ -13,7 +13,6 @@ WORKDIR /build/kawa
 RUN ./autogen.sh
 RUN ./configure
 RUN make
-RUN make check
 RUN make install
 
 FROM debian:buster
